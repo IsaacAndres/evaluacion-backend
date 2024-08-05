@@ -1,0 +1,676 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/regiones:
+    get:
+      summary: ''
+      operationId: getApiRegiones
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      nombre: 'Region 1'
+                      created_at: '2024-08-01T22:47:27.000000Z'
+                      updated_at: '2024-08-01T22:47:28.000000Z'
+                    -
+                      id: 2
+                      nombre: 'Region 2'
+                      created_at: '2024-08-03T01:49:05.000000Z'
+                      updated_at: '2024-08-03T02:35:21.000000Z'
+                    -
+                      id: 4
+                      nombre: 'Region 3'
+                      created_at: '2024-08-03T18:14:48.000000Z'
+                      updated_at: '2024-08-03T18:14:48.000000Z'
+                    -
+                      id: 5
+                      nombre: 'Region 4'
+                      created_at: '2024-08-04T19:29:10.000000Z'
+                      updated_at: '2024-08-04T19:29:10.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        nombre: 'Region 1'
+                        created_at: '2024-08-01T22:47:27.000000Z'
+                        updated_at: '2024-08-01T22:47:28.000000Z'
+                      -
+                        id: 2
+                        nombre: 'Region 2'
+                        created_at: '2024-08-03T01:49:05.000000Z'
+                        updated_at: '2024-08-03T02:35:21.000000Z'
+                      -
+                        id: 4
+                        nombre: 'Region 3'
+                        created_at: '2024-08-03T18:14:48.000000Z'
+                        updated_at: '2024-08-03T18:14:48.000000Z'
+                      -
+                        id: 5
+                        nombre: 'Region 4'
+                        created_at: '2024-08-04T19:29:10.000000Z'
+                        updated_at: '2024-08-04T19:29:10.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        nombre:
+                          type: string
+                          example: 'Region 1'
+                        created_at:
+                          type: string
+                          example: '2024-08-01T22:47:27.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-08-01T22:47:28.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiRegiones
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - nombre
+      security: []
+  '/api/regiones/{region_id}':
+    put:
+      summary: ''
+      operationId: putApiRegionesRegion_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: aut
+              required:
+                - nombre
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiRegionesRegion_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: region_id
+        description: 'The ID of the region.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/provincias:
+    get:
+      summary: ''
+      operationId: getApiProvincias
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      nombre: 'provincia 1'
+                      region_id: 1
+                      created_at: '2024-08-03T18:56:07.000000Z'
+                      updated_at: '2024-08-03T19:03:05.000000Z'
+                    -
+                      id: 3
+                      nombre: 'Provincia 2'
+                      region_id: 4
+                      created_at: '2024-08-05T01:18:56.000000Z'
+                      updated_at: '2024-08-05T01:18:56.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        nombre: 'provincia 1'
+                        region_id: 1
+                        created_at: '2024-08-03T18:56:07.000000Z'
+                        updated_at: '2024-08-03T19:03:05.000000Z'
+                      -
+                        id: 3
+                        nombre: 'Provincia 2'
+                        region_id: 4
+                        created_at: '2024-08-05T01:18:56.000000Z'
+                        updated_at: '2024-08-05T01:18:56.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        nombre:
+                          type: string
+                          example: 'provincia 1'
+                        region_id:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2024-08-03T18:56:07.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-08-03T19:03:05.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiProvincias
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: quasi
+                region_id:
+                  type: string
+                  description: ''
+                  example: quibusdam
+              required:
+                - nombre
+                - region_id
+      security: []
+  '/api/provincias/{provincia_id}':
+    put:
+      summary: ''
+      operationId: putApiProvinciasProvincia_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: sit
+                region_id:
+                  type: string
+                  description: ''
+                  example: quibusdam
+              required:
+                - nombre
+                - region_id
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiProvinciasProvincia_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: provincia_id
+        description: 'The ID of the provincia.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/ciudades:
+    get:
+      summary: ''
+      operationId: getApiCiudades
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      nombre: 'Ciudad 1'
+                      provincia_id: 1
+                      created_at: '2024-08-03T19:30:23.000000Z'
+                      updated_at: '2024-08-03T19:31:19.000000Z'
+                    -
+                      id: 3
+                      nombre: 'Ciudad 3'
+                      provincia_id: 3
+                      created_at: '2024-08-05T01:28:26.000000Z'
+                      updated_at: '2024-08-05T01:31:22.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        nombre: 'Ciudad 1'
+                        provincia_id: 1
+                        created_at: '2024-08-03T19:30:23.000000Z'
+                        updated_at: '2024-08-03T19:31:19.000000Z'
+                      -
+                        id: 3
+                        nombre: 'Ciudad 3'
+                        provincia_id: 3
+                        created_at: '2024-08-05T01:28:26.000000Z'
+                        updated_at: '2024-08-05T01:31:22.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        nombre:
+                          type: string
+                          example: 'Ciudad 1'
+                        provincia_id:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2024-08-03T19:30:23.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-08-03T19:31:19.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCiudades
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: alias
+                provincia_id:
+                  type: string
+                  description: ''
+                  example: omnis
+              required:
+                - nombre
+                - provincia_id
+      security: []
+  '/api/ciudades/{ciudad_id}':
+    put:
+      summary: ''
+      operationId: putApiCiudadesCiudad_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: iste
+                provincia_id:
+                  type: string
+                  description: ''
+                  example: cumque
+              required:
+                - nombre
+                - provincia_id
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCiudadesCiudad_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: ciudad_id
+        description: 'The ID of the ciudad.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/calles:
+    get:
+      summary: ''
+      operationId: getApiCalles
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      nombre: 'Calle 1'
+                      region:
+                        id: 1
+                        nombre: 'Region 1'
+                      provincia:
+                        id: 1
+                        nombre: 'provincia 1'
+                      ciudad:
+                        id: 1
+                        nombre: 'Ciudad 1'
+                      created_at: '2024-08-03T19:56:10.000000Z'
+                      updated_at: '2024-08-03T19:56:10.000000Z'
+                    -
+                      id: 3
+                      nombre: 'Calle 2'
+                      region:
+                        id: 4
+                        nombre: 'Region 3'
+                      provincia:
+                        id: 3
+                        nombre: 'Provincia 2'
+                      ciudad:
+                        id: 3
+                        nombre: 'Ciudad 3'
+                      created_at: '2024-08-05T01:34:00.000000Z'
+                      updated_at: '2024-08-05T01:34:00.000000Z'
+                    -
+                      id: 4
+                      nombre: 'Calle 3'
+                      region:
+                        id: 1
+                        nombre: 'Region 1'
+                      provincia:
+                        id: 1
+                        nombre: 'provincia 1'
+                      ciudad:
+                        id: 1
+                        nombre: 'Ciudad 1'
+                      created_at: '2024-08-05T01:34:11.000000Z'
+                      updated_at: '2024-08-05T01:34:11.000000Z'
+                    -
+                      id: 6
+                      nombre: 'Calle falsa'
+                      region:
+                        id: 1
+                        nombre: 'Region 1'
+                      provincia:
+                        id: 1
+                        nombre: 'provincia 1'
+                      ciudad:
+                        id: 1
+                        nombre: 'Ciudad 1'
+                      created_at: '2024-08-05T02:55:25.000000Z'
+                      updated_at: '2024-08-05T03:49:56.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        nombre: 'Calle 1'
+                        region:
+                          id: 1
+                          nombre: 'Region 1'
+                        provincia:
+                          id: 1
+                          nombre: 'provincia 1'
+                        ciudad:
+                          id: 1
+                          nombre: 'Ciudad 1'
+                        created_at: '2024-08-03T19:56:10.000000Z'
+                        updated_at: '2024-08-03T19:56:10.000000Z'
+                      -
+                        id: 3
+                        nombre: 'Calle 2'
+                        region:
+                          id: 4
+                          nombre: 'Region 3'
+                        provincia:
+                          id: 3
+                          nombre: 'Provincia 2'
+                        ciudad:
+                          id: 3
+                          nombre: 'Ciudad 3'
+                        created_at: '2024-08-05T01:34:00.000000Z'
+                        updated_at: '2024-08-05T01:34:00.000000Z'
+                      -
+                        id: 4
+                        nombre: 'Calle 3'
+                        region:
+                          id: 1
+                          nombre: 'Region 1'
+                        provincia:
+                          id: 1
+                          nombre: 'provincia 1'
+                        ciudad:
+                          id: 1
+                          nombre: 'Ciudad 1'
+                        created_at: '2024-08-05T01:34:11.000000Z'
+                        updated_at: '2024-08-05T01:34:11.000000Z'
+                      -
+                        id: 6
+                        nombre: 'Calle falsa'
+                        region:
+                          id: 1
+                          nombre: 'Region 1'
+                        provincia:
+                          id: 1
+                          nombre: 'provincia 1'
+                        ciudad:
+                          id: 1
+                          nombre: 'Ciudad 1'
+                        created_at: '2024-08-05T02:55:25.000000Z'
+                        updated_at: '2024-08-05T03:49:56.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        nombre:
+                          type: string
+                          example: 'Calle 1'
+                        region:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            nombre:
+                              type: string
+                              example: 'Region 1'
+                        provincia:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            nombre:
+                              type: string
+                              example: 'provincia 1'
+                        ciudad:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            nombre:
+                              type: string
+                              example: 'Ciudad 1'
+                        created_at:
+                          type: string
+                          example: '2024-08-03T19:56:10.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-08-03T19:56:10.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCalles
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: eligendi
+                ciudad_id:
+                  type: string
+                  description: ''
+                  example: quis
+              required:
+                - nombre
+                - ciudad_id
+      security: []
+  '/api/calles/{calle_id}':
+    put:
+      summary: ''
+      operationId: putApiCallesCalle_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: ''
+                  example: aspernatur
+                ciudad_id:
+                  type: string
+                  description: ''
+                  example: enim
+              required:
+                - nombre
+                - ciudad_id
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCallesCalle_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: calle_id
+        description: 'The ID of the calle.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''

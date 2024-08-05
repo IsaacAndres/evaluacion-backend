@@ -1,0 +1,644 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "c56a70f0-9048-4bc5-9266-d2393ad83bc9",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/regiones",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/regiones",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/regiones"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"nombre\":\"Region 1\",\"created_at\":\"2024-08-01T22:47:27.000000Z\",\"updated_at\":\"2024-08-01T22:47:28.000000Z\"},{\"id\":2,\"nombre\":\"Region 2\",\"created_at\":\"2024-08-03T01:49:05.000000Z\",\"updated_at\":\"2024-08-03T02:35:21.000000Z\"},{\"id\":4,\"nombre\":\"Region 3\",\"created_at\":\"2024-08-03T18:14:48.000000Z\",\"updated_at\":\"2024-08-03T18:14:48.000000Z\"},{\"id\":5,\"nombre\":\"Region 4\",\"created_at\":\"2024-08-04T19:29:10.000000Z\",\"updated_at\":\"2024-08-04T19:29:10.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/regiones",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/regiones",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/regiones"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"consequatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/regiones\/{region_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/regiones\/:region_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/regiones\/:region_id",
+                            "variable": [
+                                {
+                                    "id": "region_id",
+                                    "key": "region_id",
+                                    "value": "1",
+                                    "description": "The ID of the region."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"aut\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/regiones\/{region_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/regiones\/:region_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/regiones\/:region_id",
+                            "variable": [
+                                {
+                                    "id": "region_id",
+                                    "key": "region_id",
+                                    "value": "1",
+                                    "description": "The ID of the region."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/provincias",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/provincias",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/provincias"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"nombre\":\"provincia 1\",\"region_id\":1,\"created_at\":\"2024-08-03T18:56:07.000000Z\",\"updated_at\":\"2024-08-03T19:03:05.000000Z\"},{\"id\":3,\"nombre\":\"Provincia 2\",\"region_id\":4,\"created_at\":\"2024-08-05T01:18:56.000000Z\",\"updated_at\":\"2024-08-05T01:18:56.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/provincias",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/provincias",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/provincias"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"quasi\",\"region_id\":\"quibusdam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/provincias\/{provincia_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/provincias\/:provincia_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/provincias\/:provincia_id",
+                            "variable": [
+                                {
+                                    "id": "provincia_id",
+                                    "key": "provincia_id",
+                                    "value": "1",
+                                    "description": "The ID of the provincia."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"sit\",\"region_id\":\"quibusdam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/provincias\/{provincia_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/provincias\/:provincia_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/provincias\/:provincia_id",
+                            "variable": [
+                                {
+                                    "id": "provincia_id",
+                                    "key": "provincia_id",
+                                    "value": "1",
+                                    "description": "The ID of the provincia."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/ciudades",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ciudades",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ciudades"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"nombre\":\"Ciudad 1\",\"provincia_id\":1,\"created_at\":\"2024-08-03T19:30:23.000000Z\",\"updated_at\":\"2024-08-03T19:31:19.000000Z\"},{\"id\":3,\"nombre\":\"Ciudad 3\",\"provincia_id\":3,\"created_at\":\"2024-08-05T01:28:26.000000Z\",\"updated_at\":\"2024-08-05T01:31:22.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/ciudades",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ciudades",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ciudades"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"alias\",\"provincia_id\":\"omnis\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/ciudades\/{ciudad_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ciudades\/:ciudad_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ciudades\/:ciudad_id",
+                            "variable": [
+                                {
+                                    "id": "ciudad_id",
+                                    "key": "ciudad_id",
+                                    "value": "1",
+                                    "description": "The ID of the ciudad."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"iste\",\"provincia_id\":\"cumque\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/ciudades\/{ciudad_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ciudades\/:ciudad_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/ciudades\/:ciudad_id",
+                            "variable": [
+                                {
+                                    "id": "ciudad_id",
+                                    "key": "ciudad_id",
+                                    "value": "1",
+                                    "description": "The ID of the ciudad."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/calles",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/calles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/calles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"nombre\":\"Calle 1\",\"region\":{\"id\":1,\"nombre\":\"Region 1\"},\"provincia\":{\"id\":1,\"nombre\":\"provincia 1\"},\"ciudad\":{\"id\":1,\"nombre\":\"Ciudad 1\"},\"created_at\":\"2024-08-03T19:56:10.000000Z\",\"updated_at\":\"2024-08-03T19:56:10.000000Z\"},{\"id\":3,\"nombre\":\"Calle 2\",\"region\":{\"id\":4,\"nombre\":\"Region 3\"},\"provincia\":{\"id\":3,\"nombre\":\"Provincia 2\"},\"ciudad\":{\"id\":3,\"nombre\":\"Ciudad 3\"},\"created_at\":\"2024-08-05T01:34:00.000000Z\",\"updated_at\":\"2024-08-05T01:34:00.000000Z\"},{\"id\":4,\"nombre\":\"Calle 3\",\"region\":{\"id\":1,\"nombre\":\"Region 1\"},\"provincia\":{\"id\":1,\"nombre\":\"provincia 1\"},\"ciudad\":{\"id\":1,\"nombre\":\"Ciudad 1\"},\"created_at\":\"2024-08-05T01:34:11.000000Z\",\"updated_at\":\"2024-08-05T01:34:11.000000Z\"},{\"id\":6,\"nombre\":\"Calle falsa\",\"region\":{\"id\":1,\"nombre\":\"Region 1\"},\"provincia\":{\"id\":1,\"nombre\":\"provincia 1\"},\"ciudad\":{\"id\":1,\"nombre\":\"Ciudad 1\"},\"created_at\":\"2024-08-05T02:55:25.000000Z\",\"updated_at\":\"2024-08-05T03:49:56.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/calles",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/calles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/calles"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"eligendi\",\"ciudad_id\":\"quis\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/calles\/{calle_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/calles\/:calle_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/calles\/:calle_id",
+                            "variable": [
+                                {
+                                    "id": "calle_id",
+                                    "key": "calle_id",
+                                    "value": "1",
+                                    "description": "The ID of the calle."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\":\"aspernatur\",\"ciudad_id\":\"enim\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/calles\/{calle_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/calles\/:calle_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/calles\/:calle_id",
+                            "variable": [
+                                {
+                                    "id": "calle_id",
+                                    "key": "calle_id",
+                                    "value": "1",
+                                    "description": "The ID of the calle."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
