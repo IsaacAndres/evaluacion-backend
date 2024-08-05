@@ -12,6 +12,8 @@
 * Copiar el archivo de configuración `cp .env.example .env`
 * Configurar el archivo `.env`
 ```
+APP_URL=http://tu_app_url
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -24,3 +26,5 @@ DB_PASSWORD=tu_contraseña
 * * `php artisan migrate --seed`
 * * `php artisan serve`
 
+## Documentación API
+* {APP_URL}/docs
